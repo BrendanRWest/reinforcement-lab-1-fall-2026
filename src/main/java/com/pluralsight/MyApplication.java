@@ -15,8 +15,14 @@ public class MyApplication {
         System.out.print("Please enter your age: ");
         age = scan.nextInt();
 
-        System.out.printf("Name: %s%n", name);
-        System.out.printf("Age: %d", age);
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+
+        if (age >= 18) {
+            System.out.println("You are old enough to vote!");
+        } else {
+            System.out.println("You are not old enough to vote.");
+        }
 
         scan.close();
 
