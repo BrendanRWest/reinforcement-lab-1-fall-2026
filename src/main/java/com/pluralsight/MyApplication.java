@@ -15,6 +15,7 @@ public class MyApplication {
         canVote(age);
         message(name, age);
         isAlice(name);
+        isBobAnd21(name, age);
 
         scan.close();
     }
@@ -45,6 +46,14 @@ public class MyApplication {
             System.out.println("Oh my gosh, hey Alice!!!");
         } else {
             System.out.println("Do you know where Alice is?");
+        }
+    }
+
+    public static void isBobAnd21(String name, int age) {
+        if(name.equalsIgnoreCase("bob") && age>=21){
+            System.out.printf("Okay %s, you can drink!%n", name);
+        } else {
+            System.out.printf("No %s, don't even think about drinking!%n", name);
         }
     }
 }
