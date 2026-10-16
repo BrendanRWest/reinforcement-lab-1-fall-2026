@@ -17,6 +17,12 @@ public class MyApplication {
         isAlice(name);
         isBobAnd21(name, age);
 
+        System.out.print("Please enter a number between 1 - 1,000,000: ");
+        double number = scan.nextDouble();
+
+
+        System.out.printf("The square root of %f is %.2f", number, squareRoot(number));
+
         scan.close();
     }
 
@@ -53,7 +59,11 @@ public class MyApplication {
         if(name.equalsIgnoreCase("bob") && age>=21){
             System.out.printf("Okay %s, you can drink!%n", name);
         } else {
-            System.out.printf("No %s, don't even think about drinking!%n", name);
+            System.out.printf("No %s, you're not Bob, don't even think about drinking!%n", name);
         }
+    }
+
+    public static double squareRoot(double num) {
+        return Math.sqrt(num);
     }
 }
