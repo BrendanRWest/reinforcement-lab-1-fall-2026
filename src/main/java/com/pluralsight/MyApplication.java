@@ -14,6 +14,8 @@ public class MyApplication {
 
         canVote(age);
         message(name, age);
+        isAlice(name);
+
         scan.close();
     }
 
@@ -35,6 +37,14 @@ public class MyApplication {
             System.out.println("You are old enough to vote!");
         } else {
             System.out.println("You are not old enough to vote.");
+        }
+    }
+
+    public static void isAlice(String name) {
+        if (name.equalsIgnoreCase("Alice")){
+            System.out.println("Oh my gosh, hey Alice!!!");
+        } else {
+            System.out.println("Do you know where Alice is?");
         }
     }
 }
